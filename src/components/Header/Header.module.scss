@@ -1,6 +1,7 @@
 @import "../../sass/helper";
 
 .header {
+	max-height: 146px;
 }
 
 .headerTop {
@@ -25,5 +26,10 @@
 }
 
 .headerNavigation {
-	background-color: $--navigation-bg;
+	@include tablet {
+		background-color: $--navigation-bg;
+		position: absolute;
+		left: 0;
+		width: 100%;
+	}
 }

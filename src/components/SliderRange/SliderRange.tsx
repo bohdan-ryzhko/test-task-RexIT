@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import 'rc-slider/assets/index.css';
 import Slider from 'rc-slider';
 import { CrackerCalcState, changeItem } from "../../redux/crackerCalcSlice";
@@ -52,6 +52,11 @@ export const SliderRange: FC<SliderRangeProps> = ({ currentColor, imagePath, typ
       } else {
         value = 0;
       }
+    }
+
+    const maxValue = type === "corn" ? 100 - (totalSum - crackerState[type]) : 100 - totalSum + crackerState[type];
+    if (value > maxValue) {
+      value = maxValue;
     }
 
     if (totalSum + value > 100 || totalSum + value < 100) {
