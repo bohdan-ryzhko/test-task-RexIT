@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import 'rc-slider/assets/index.css';
 import Slider from 'rc-slider';
 import { CrackerCalcState, changeItem } from "../../redux/crackerCalcSlice";

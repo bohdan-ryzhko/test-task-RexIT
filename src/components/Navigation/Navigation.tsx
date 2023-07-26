@@ -22,7 +22,7 @@ export const Navigation: FC<NavigationProps> = ({ toggleMobileMenu }) => {
       <ul className={sass.navigationList}>
         {
           navigationLinks.map(({ id, text }) => <li key={id} className={sass.navigationItem}>
-            <a href="#">{text}</a>
+            <a href="/">{text}</a>
           </li>)
         }
       </ul>
