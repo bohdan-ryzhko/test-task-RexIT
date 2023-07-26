@@ -1,0 +1,57 @@
+@import "../../sass/helper";
+
+.navigation {
+	transform: translateY(-150%);
+}
+
+.navigationActive {
+	transform: translateY(0);
+}
+
+.navigation,
+.navigationActive {
+	position: fixed;
+	background-color: $--navigation-bg;
+	z-index: 100;
+	transition: transform 400ms ease;
+	width: 100vw;
+	height: 100vw;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include tablet {
+		position: static;
+		max-height: 82px;
+		width: 100%;
+		background-color: transparent;
+		transform: translateY(0);
+	}
+}
+
+.navigationList {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	@include tablet {
+		flex-direction: row;
+		gap: none;
+		justify-content: space-between;
+	}
+}
+
+.navigationItem {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: calc(18 / 17);
+	letter-spacing: 1px;
+
+	@include tablet {
+		font-size: 14px;
+		line-height: calc(18 / 14);
+	}
+}

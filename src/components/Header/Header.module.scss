@@ -1,0 +1,29 @@
+@import "../../sass/helper";
+
+.header {
+}
+
+.headerTop {
+	height: 64px;
+	background-color: $--header-top-bg;
+}
+
+.headerTopInner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.toggleBtn {
+	position: relative;
+	z-index: 101;
+
+	@include tablet {
+		display: none;
+	}
+}
+
+.headerNavigation {
+	background-color: $--navigation-bg;
+}
