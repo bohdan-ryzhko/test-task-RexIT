@@ -25,13 +25,14 @@
 	position: absolute;
 	left: 0;
 	width: 80%;
-	top: 60px;
+	top: 40px;
 	background-color: $--hero-text-bg;
 	padding-right: 10px;
 	padding-bottom: 20px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
+	height: 300px;
 
 	& > span {
 		max-width: 95%;
@@ -66,6 +67,7 @@
 	}
 
 	@include mobile {
+		top: 60px;
 		width: 70%;
 		padding-right: 20px;
 		padding-bottom: 30px;
@@ -80,6 +82,10 @@
 }
 
 .heroTitleWrapper {
+	@media screen and (max-height: 730px) {
+		bottom: 40px;
+	}
+
 	position: absolute;
 	bottom: 140px;
 	left: 50%;
@@ -87,7 +93,7 @@
 	min-width: 300px;
 	width: 100%;
 	max-width: 700px;
-	z-index: 102;
+	z-index: 100;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -117,7 +123,7 @@
 	text-transform: uppercase;
 	color: #fff;
 	position: relative;
-	z-index: 102;
+	z-index: 100;
 
 	@include tablet {
 		text-shadow: none;
@@ -129,7 +135,7 @@
 
 .heroTestBtn {
 	padding: 14px 32px;
-	background-color: $--hero-btn-bg;
+	background-color: $--accent-color;
 	border-radius: 90px;
 	color: #fff;
 	font-size: 20px;
@@ -141,6 +147,6 @@
 	transition: background-color 300ms ease;
 
 	&:hover {
-		background-color: $--hero-btn-bg__hover;
+		background-color: $--accent-color__hover;
 	}
 }

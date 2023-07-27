@@ -18,7 +18,7 @@
 
 .toggleBtn {
 	position: relative;
-	z-index: 101;
+	z-index: 10;
 
 	@include tablet {
 		display: none;
@@ -29,6 +29,7 @@
 	@include tablet {
 		background-color: $--navigation-bg;
 		position: absolute;
+		z-index: 101;
 		left: 0;
 		width: 100%;
 	}

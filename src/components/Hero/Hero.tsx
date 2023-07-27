@@ -14,7 +14,7 @@ export const Hero: FC = () => {
             </p>
             <div className={sass.heroTitleWrapper}>
               <h1 className={sass.heroTitle}>mostly tastes with freshes</h1>
-              <button className={sass.heroTestBtn}>taste it</button>
+              <button type="button" className={sass.heroTestBtn}>taste it</button>
             </div>
           </div>
         </Container>

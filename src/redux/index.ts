@@ -1,4 +1,5 @@
-import { selectBeans, selectCorn, selectMalt, selectWheat } from "./selectors";
+import { changePack } from "./chooseOptionSlice";
+import { selectBeans, selectCorn, selectMalt, selectPack, selectWheat } from "./selectors";
 import { store } from "./store";
 
 export {
@@ -7,4 +8,6 @@ export {
   selectCorn,
   selectMalt,
   selectWheat,
+  changePack,
+  selectPack,
 }

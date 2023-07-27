@@ -11,11 +11,11 @@
 .navigation,
 .navigationActive {
 	position: fixed;
-	background-color: $--navigation-bg;
-	z-index: 100;
+	background-color: $--navigation-bg__mobile;
+	z-index: 1000;
 	transition: transform 400ms ease;
 	width: 100vw;
-	height: 100vw;
+	height: 100vh;
 	left: 0;
 	display: flex;
 	justify-content: center;

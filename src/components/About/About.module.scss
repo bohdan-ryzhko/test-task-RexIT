@@ -1,0 +1,152 @@
+@import "../../sass/helper";
+
+.about {
+	background-image: url("../../images/about/about-bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 40px;
+	position: relative;
+
+	@include mobile {
+		padding-top: 60px;
+	}
+
+	@include tablet {
+		padding-top: 80px;
+	}
+}
+
+.aboutDescription {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	gap: 37px;
+	margin-bottom: 250px;
+
+	@include mobile {
+		flex-direction: row;
+		align-items: start;
+		// margin-bottom: 186px;
+	}
+
+	@include tablet {
+		margin-bottom: 186px;
+	}
+}
+
+.aboutTitile {
+	color: $--main-color;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: calc(34 / 28);
+	letter-spacing: 1px;
+
+	@include tablet {
+		font-size: 48px;
+		line-height: calc(54 / 48);
+	}
+}
+
+.aboutImage {
+	max-width: 380px;
+	max-height: 380px;
+
+	& > img {
+		display: inline-block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.aboutText {
+	position: absolute;
+	top: 200px;
+	right: 0;
+	max-width: 90%;
+	padding: 30px 40px;
+	background-color: rgba(229, 211, 207, 0.8);
+
+	@include mobile {
+		top: 110px;
+	}
+
+	@include tablet {
+		max-width: 75%;
+		top: 174px;
+	}
+
+	& > p {
+		color: $--main-color;
+		font-size: 10px;
+		line-height: calc(28 / 18);
+
+		@include mobile {
+			font-size: 12px;
+			line-height: calc(20 / 10);
+		}
+
+		@include tablet {
+			font-size: 18px;
+			line-height: calc(28 / 18);
+		}
+	}
+}
+
+.selectPack {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	@include mobile {
+		flex-direction: row;
+		gap: none;
+		justify-content: space-between;
+	}
+}
+
+.selectWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+
+	@include mobile {
+		justify-content: stretch;
+		gap: 24px;
+	}
+}
+
+.choosePackImage {
+	width: 40px;
+	height: 40px;
+
+	@include tablet {
+		width: 60px;
+		height: 60px;
+	}
+
+	& > img {
+		display: inline-block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.addPack {
+	border-radius: 100%;
+	background-color: $--accent-color;
+	width: 56px;
+	height: 56px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 300ms ease;
+	align-self: center;
+
+	&:hover {
+		background-color: $--accent-color__hover;
+	}
+}

@@ -6,6 +6,8 @@ import { useCrackerState } from "../../hooks/useCrackerState";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../types";
 
+import sass from "./SliderRange.module.scss";
+
 type CurrentColor = "#00A651" | "#49743F" | "#ABA000" | "#939393";
 
 interface SliderRangeProps {
@@ -67,18 +69,20 @@ export const SliderRange: FC<SliderRangeProps> = ({ currentColor, imagePath, typ
   }
 
   return (
-    <div>
-      <div className="">
-        <img src={imagePath} alt="" />
+    <div className={sass.sliderWrapper}>
+      <div className={sass.sliderImage}>
+        <img src={imagePath} alt={type} />
       </div>
       <Slider
         min={0}
         max={100}
         railStyle={{
           backgroundColor: currentColor,
+          width: "100%",
         }}
         trackStyle={{
           backgroundColor: currentColor,
+          width: "100%",
         }}
         handleStyle={{
           ...dotStyles,
@@ -87,7 +91,7 @@ export const SliderRange: FC<SliderRangeProps> = ({ currentColor, imagePath, typ
         value={crackerState[type]}
         onChange={(value) => handleChange({ property: type, value: Array.isArray(value) ? value[0] : value })}
       />
-      <span>{crackerState[type]}%</span>
+      <span className={sass.percent}>{crackerState[type]}%</span>
     </div>
   )
 }
