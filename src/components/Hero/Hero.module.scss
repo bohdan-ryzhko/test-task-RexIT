@@ -1,7 +1,146 @@
+@import "../../sass/helper";
+
 .hero {
 	background-image: url("../../images/hero/hero-bg.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: calc(100vh - 64px);
+}
+
+.heroWrapper {
+	position: relative;
+	height: 100%;
+	@include tablet {
+		padding-top: 190px;
+	}
+}
+
+.heroInner {
+	height: 100%;
+	padding-top: 5px;
+}
+
+.heroText {
+	position: absolute;
+	left: 0;
+	width: 80%;
+	top: 60px;
+	background-color: $--hero-text-bg;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+
+	& > span {
+		max-width: 95%;
+		padding-left: 5px;
+		height: 268px;
+		display: flex;
+		align-items: flex-end;
+		margin-left: auto;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: calc(28 / 18);
+		position: relative;
+
+		@include tablet {
+			text-align: right;
+			max-width: 365px;
+			height: 268px;
+		}
+
+		@include tablet {
+			&::after {
+				content: "";
+				position: absolute;
+				width: 1px;
+				height: 100%;
+				background-color: #fff;
+				top: 0;
+				right: -24px;
+			}
+		}
+	}
+
+	@include mobile {
+		width: 70%;
+		padding-right: 20px;
+		padding-bottom: 30px;
+	}
+
+	@include tablet {
+		top: 170px;
+		width: 50%;
+		height: 360px;
+		padding-right: 104px;
+	}
+}
+
+.heroTitleWrapper {
+	position: absolute;
+	bottom: 140px;
+	left: 50%;
+	transform: translateX(-50%);
+	min-width: 300px;
+	width: 100%;
+	max-width: 700px;
+	z-index: 102;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+
+	@include tablet {
+		position: static;
+		transform: none;
+		align-items: flex-end;
+		justify-content: space-between;
+		float: right;
+		max-width: 543px;
+		gap: none;
+		height: 340px;
+	}
+}
+
+.heroTitle {
+	font-size: 44px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: calc(52 / 44);
+	text-align: center;
+	text-shadow: $--shadow;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #fff;
+	position: relative;
+	z-index: 102;
+
+	@include tablet {
+		text-shadow: none;
+		text-align: left;
+		font-size: 64px;
+		line-height: calc(64 / 72);
+	}
+}
+
+.heroTestBtn {
+	padding: 14px 32px;
+	background-color: $--hero-btn-bg;
+	border-radius: 90px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: calc(28 / 20);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	box-shadow: $--shadow;
+	transition: background-color 300ms ease;
+
+	&:hover {
+		background-color: $--hero-btn-bg__hover;
+	}
 }
