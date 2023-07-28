@@ -1,30 +1,32 @@
 import sass from "./Navigation.module.scss";
 import { FC } from "react";
 
-const navigationLinks = [
-  { text: "home", id: "id-01" },
-  { text: "about us", id: "id-02" },
-  { text: "contacts us", id: "id-03" },
-  { text: "checkout", id: "id-04" },
-  { text: "account", id: "id-05" },
-];
-
 interface NavigationProps {
   toggleMobileMenu: boolean;
 }
 
-export const Navigation: FC<NavigationProps> = ({ toggleMobileMenu }) => {
 
-  console.log(window.location.pathname)
+export const Navigation: FC<NavigationProps> = ({ toggleMobileMenu }) => {
+  const defineLocation = (pathname: string) => pathname.split("/test-task-rexit").join("");
 
   return (
     <nav className={toggleMobileMenu ? sass.navigationActive : sass.navigation}>
       <ul className={sass.navigationList}>
-        {
-          navigationLinks.map(({ id, text }) => <li key={id} className={sass.navigationItem}>
-            <a href="/">{text}</a>
-          </li>)
-        }
+        <li className={sass.navigationItem}>
+          <a className={defineLocation(window.location.pathname) === "" ? sass.navLinkActiv : sass.navLink} href="/">home</a>
+        </li>
+        <li className={sass.navigationItem}>
+          <a className={defineLocation(window.location.pathname) === "about" ? sass.navLinkActiv : sass.navLink} href="/">about us</a>
+        </li>
+        <li className={sass.navigationItem}>
+          <a className={defineLocation(window.location.pathname) === "contacts" ? sass.navLinkActiv : sass.navLink} href="/">contacts us</a>
+        </li>
+        <li className={sass.navigationItem}>
+          <a className={defineLocation(window.location.pathname) === "checkout" ? sass.navLinkActiv : sass.navLink} href="/">checkout</a>
+        </li>
+        <li className={sass.navigationItem}>
+          <a className={defineLocation(window.location.pathname) === "account" ? sass.navLinkActiv : sass.navLink} href="/">account</a>
+        </li>
       </ul>
     </nav>
   )

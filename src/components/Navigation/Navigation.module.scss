@@ -55,3 +55,12 @@
 		line-height: calc(18 / 14);
 	}
 }
+
+.navLink,
+.navLinkActiv {
+	padding: 31px 0;
+}
+
+.navLinkActiv {
+	border-bottom: 2px solid $--accent-color;
+}
