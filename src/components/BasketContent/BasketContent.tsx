@@ -35,20 +35,23 @@ export const BasketContent: FC<BasketContentProps> = ({ setToggleBasket }) => {
         basket.list.length === 0 &&
         <p style={{ color: "#4d4d4d", textAlign: "center" }}>Choose your pack of crackers</p>
       }
-      <ul className={sass.basketImgList}>
-        <li className={sass.basketImg}>
-          <img width={23} src={CrackerImage1} alt="" />
-        </li>
-        <li className={sass.basketImg}>
-          <img width={23} src={CrackerImage2} alt="" />
-        </li>
-        <li className={sass.basketImg}>
-          <img width={23} src={CrackerImage3} alt="" />
-        </li>
-        <li className={sass.basketImg}>
-          <img width={23} src={CrackerImage4} alt="" />
-        </li>
-      </ul>
+      {
+        basket.list.length > 0 &&
+        <ul className={sass.basketImgList}>
+          <li className={sass.basketImg}>
+            <img width={23} src={CrackerImage1} alt="" />
+          </li>
+          <li className={sass.basketImg}>
+            <img width={23} src={CrackerImage2} alt="" />
+          </li>
+          <li className={sass.basketImg}>
+            <img width={23} src={CrackerImage3} alt="" />
+          </li>
+          <li className={sass.basketImg}>
+            <img width={23} src={CrackerImage4} alt="" />
+          </li>
+        </ul>
+      }
       <ul className={sass.basketList}>
         {
           basket.list.length > 0 && basket.list.map(pack => <li className={sass.basketItem} key={pack.id}>
