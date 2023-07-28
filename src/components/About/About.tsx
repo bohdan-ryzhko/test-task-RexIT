@@ -12,6 +12,7 @@ import { AppDispatch } from "../../types";
 import { useDispatch } from "react-redux";
 import { addPack } from "../../redux/basketSlice";
 import { useCrackerState } from "../../hooks/useCrackerState";
+import { toast } from "react-toastify";
 
 export const About: FC = () => {
 
@@ -21,11 +22,12 @@ export const About: FC = () => {
 
   const addCracker = () => {
     if (option.pack === "") {
-      console.log("error");
+      toast.warn("Choose pack please");
       return;
     }
 
     dispatch(addPack({ ...crackerState, ...option }));
+    toast.success("Cracker add success!");
   }
 
   return (
