@@ -2,6 +2,9 @@
 
 .header {
 	max-height: 146px;
+	position: fixed;
+	width: 100vw;
+	z-index: 1000;
 }
 
 .headerTop {

@@ -15,17 +15,17 @@ import { useCrackerState } from "../../hooks/useCrackerState";
 
 export const About: FC = () => {
 
-  const { pack } = useOptionPack();
+  const { option } = useOptionPack();
   const crackerState = useCrackerState();
   const dispatch: AppDispatch = useDispatch();
 
   const addCracker = () => {
-    if (pack === "") {
+    if (option.pack === "") {
       console.log("error");
       return;
     }
 
-    dispatch(addPack({ ...crackerState, pack }));
+    dispatch(addPack({ ...crackerState, ...option }));
   }
 
   return (

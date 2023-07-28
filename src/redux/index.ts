@@ -1,5 +1,5 @@
 import { changePack } from "./chooseOptionSlice";
-import { selectBeans, selectCorn, selectMalt, selectPack, selectWheat } from "./selectors";
+import { selectBasket, selectBeans, selectCorn, selectMalt, selectOption, selectWheat } from "./selectors";
 import { store } from "./store";
 
 export {
@@ -9,5 +9,6 @@ export {
   selectMalt,
   selectWheat,
   changePack,
-  selectPack,
+  selectOption,
+  selectBasket,
 }

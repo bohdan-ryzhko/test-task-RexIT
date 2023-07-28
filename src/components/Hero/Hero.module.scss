@@ -5,7 +5,8 @@
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: calc(100vh - 64px);
+	padding-top: 64px;
+	height: 100vh;
 }
 
 .heroWrapper {
@@ -18,7 +19,6 @@
 
 .heroInner {
 	height: 100%;
-	padding-top: 5px;
 }
 
 .heroText {

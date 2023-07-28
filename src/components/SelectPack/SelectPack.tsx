@@ -4,6 +4,7 @@ import { Option } from "../../interfaces";
 import { AppDispatch } from "../../types";
 import { useDispatch } from "react-redux";
 import { changePack } from "../../redux";
+import { getPackPrice } from "../../utils";
 
 const options: Option[] = [
   { value: "small", label: "Small Pack" },
@@ -68,8 +69,11 @@ export const SelectPack: FC = () => {
           }),
         }}
         defaultValue={selectedOption}
-        onChange={(value) => {
-          dispatch(changePack(value?.value));
+        onChange={(selectedPack) => {
+          const price = getPackPrice(selectedPack?.value);
+          const pack = selectedPack?.value;
+
+          dispatch(changePack({ price, pack }));
         }}
         options={options}
       />

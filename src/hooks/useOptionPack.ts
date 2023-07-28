@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { selectPack } from "../redux";
+import { selectOption } from "../redux";
 
 export const useOptionPack = () => ({
-  pack: useSelector(selectPack),
+  option: useSelector(selectOption),
 });

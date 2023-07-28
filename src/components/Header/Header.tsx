@@ -7,6 +7,7 @@ import { Container } from "../Container/Container";
 import { Logo } from "../Logo/Logo";
 import { Navigation } from "../Navigation/Navigation";
 import { addNoScroll, removeNoScroll } from "../../utils";
+import { OrderInfo } from "../OrderInfo/OrderInfo";
 
 export const Header: FC = () => {
   const [toggleMobileMenu, setToggleMobileMenu] = useState<boolean>(false);
@@ -33,6 +34,7 @@ export const Header: FC = () => {
         <Container>
           <div className={sass.headerTopInner}>
             <Logo />
+            <OrderInfo />
             <button
               className={sass.toggleBtn}
               onClick={handleToggleMenu}
