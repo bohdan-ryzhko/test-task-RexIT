@@ -17,7 +17,7 @@ export const OrderInfo: FC = () => {
         <CountOrder />
         <span>{basket.list.length}</span>
       </div>
-      <p className={sass.orderTotal}>total: {basket.total}</p>
+      <p className={sass.orderTotal}>total: {basket.total} &#8364;</p>
       <button
         onClick={() => setToggleBasket(prev => !prev)}
         className={sass.showBasket}
