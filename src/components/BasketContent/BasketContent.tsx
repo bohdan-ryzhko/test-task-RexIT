@@ -25,6 +25,10 @@ export const BasketContent: FC<BasketContentProps> = ({ setToggleBasket }) => {
         type="button">
         <IoMdClose color="#4d4d4d" size={30}/>
       </button>
+      {
+        basket.list.length === 0 &&
+        <p style={{ color: "#4d4d4d", textAlign: "center" }}>Choose your pack of crackers</p>
+      }
       <ul className={sass.basketList}>
         {
           basket.list.length > 0 && basket.list.map(pack => <li className={sass.basketItem} key={pack.id}>

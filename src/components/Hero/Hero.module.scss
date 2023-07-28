@@ -7,6 +7,10 @@
 	background-repeat: no-repeat;
 	padding-top: 64px;
 	height: 100vh;
+
+	@include tablet {
+		height: calc(100vh - 64px);
+	}
 }
 
 .heroWrapper {

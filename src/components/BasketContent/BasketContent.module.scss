@@ -11,6 +11,10 @@
 	min-height: 100px;
 	z-index: 1000;
 	padding: 20px 50px;
+
+	@include tablet {
+		position: absolute;
+	}
 }
 
 .basketList {
